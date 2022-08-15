@@ -18,7 +18,7 @@ class TextRewrite:
         @var rewrite_types: Type of words that can rewrited 
         """
         rewrite_types = [u'NN', u'NNS', u'JJ', u'JJS']
-        pos_tokenizer = nlp(unicode(self.sentence))
+        pos_tokenizer = nlp(str(self.sentence))
         words = []
         for token in pos_tokenizer:
             #print(token.pos_, token.text, token.tag_)
